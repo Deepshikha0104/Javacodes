@@ -1,0 +1,11 @@
+-----> power of control constructs
+
+Interactive: -> The program can ask the user questions and react accordingly.
+Efficient looping: -> help repeat tasks without copy-pasting lines of code.
+Dynamic: -> It can change behaviour based on different input conditions.
+
+-----------> IF else
+
+-> selection statements help your program make decisions based on conditions
+-> switch is great for selecting one option out of many predefined choices.
+-> allowing it to adapt to different situations Dynamically.

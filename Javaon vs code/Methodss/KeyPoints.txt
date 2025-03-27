@@ -1,0 +1,40 @@
+1.  What is a method in java?
+Answer:  A method in java is a block of code that performs a specific tasks.
+It helps organize code, makes it reusable, and improves readability.
+
+2. difference b/w void and returns methods?
+Answer:  A void method does not return anything, while a return method gives back a value after execution.
+
+3.  What is parameters in a method?
+Answer:  parameters are values or arguments passed to a method that it uses to perform its tasks. 
+
+4.  Why should we use methods in programming?
+Answer:  methods help in breaking down large tasks into smaller parts, reducing code repetition, and making the code
+ easier to understand and maintain.
+
+5. What are Methods with parameters but without return values?
+Answer:  take input values,dont return anything. perform specific tasks with the provided inputs.
+
+6. Why are parameters important in methods?
+Answer:  parameters allow methods to be more flexible and customizable. Instead of writing the same logic repeatedly,
+ can write a single method and pass different parameters each time to perform different actions.
+
+7. Benefit of using void methodswith parameters?
+Answer:  The Benefit is that you can make your code more dynamic by using parameters to change the methods behaviour,
+ while keeping your code neat and reducing redundancy.
+______________________
+KEYPOINTS
+
+-> methods are reusable blocks of code that perform specific tasks.
+-> They help avoid repetition and make your code cleaner and more organized.
+-> Can write void methods(no return type) or return methods(that give something back).
+-> parameters are like inputs that a method needs to perform its task.
+-> There are four types of methods based on whether they take parameters and/or return values.
+->  Methods without parameters and without return values perform actions without taking in any information or returning
+     any results.
+-> They help make code reusable, organize and easy to maintain.
+-> perfect for consistent tasks.
+-> methods with parameters but without return values take input but dont return anything.
+-> Great for tasks where you need customization, like sending personalized message or preparing different types of chai.
+-> help reduce code repetition, make program more organized and easy to understand.
+-> passing parameters is like giving the method specific instructions to do.

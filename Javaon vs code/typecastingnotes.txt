@@ -1,0 +1,32 @@
+1. Why do we need suffixes for float and long literals in Java?
+
+Answer: Suffixes like 'f' and 'L' help Java distinguish between different numeric types. By default, Java considers
+ decimal values as double and whole numbers as int. Adding a suffix lets Java know you want a specific type like float
+  or long.
+
+2. What happens if you forget to use the 'f' suffix when assigning a decimal value to a float?
+
+• Answer: Java will assume the value is a double by default, leading to a compilation error if you try to assign it
+ to a float without typecasting.
+
+3. Can you use lowercase 'I' for a long literal?
+
+• Answer: Yes, you can, but it's not recommended as it can easily be mistaken for the number 
+                1. It's better to use 'L' for readability.
+
+4. What's the difference between float and double in terms of precision?
+
+• Answer: Float is a single-precision 32-bit data type, whereas double is a double-precision 64-bit data type.
+          Double provides more accuracy but also takes more memory.
+
+Summary of Key Points
+
+Suffixes are used to explicitly define float (f) and long (L) literals in Java.
+
+By default, Java treats decimals as double and whole numbers as int.
+
+Use 'L' instead of 'I' to avoid confusion with the number 1.
+
+Adding the correct suffix ensures that your program runs without type errors.
+
+Scientific notation helps represent very large or small values easily.

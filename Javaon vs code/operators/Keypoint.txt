@@ -1,0 +1,31 @@
+1. What are logical operators in Java?
+
+Answer: Logical operators are used to combine multiple conditions and return a true or false result. They help create complex decision-making scenarios in your code.
+
+2. What does the && operator do?
+
+Answer: The && (Logical AND) operator returns true only if both conditions are true. If either condition is false, it returns false.
+
+3. How is the || operator different from &&?
+
+Answer: The || (Logical OR) operator returns true if at least one of the conditions is true, whereas && requires both conditions to be true.
+
+4. What is the purpose of the operator?
+
+Answer: The I (Logical NOT) operator inverts a condition, changing true to false and vice versa.
+
+5. Can logical operators be combined?
+
+Answer: Yes, logical operators can be combined to create more complex conditions, allowing for sophisticated decision-making in code.
+
+Summary of Key Points
+
+• Logical operators help combine multiple conditions, making your code smarter and capable of handling complex decisions.
+
+The Logical AND (88) operator requires both conditions to be true.
+
+The Logical OR (||) operator requires at least one condition to be true.
+
+The Logical NOT (1) operator flips the condition, turning true into false and vice versa.
+
+Logical operators are essential for creating complex conditions and making more nuanced decisions in programming.
