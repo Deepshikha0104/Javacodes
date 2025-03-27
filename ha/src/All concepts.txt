@@ -1,0 +1,499 @@
+25java is case sensitive
+
+LANGUAGE - IT IS MEDIAM TO ESTABLISH OUR COMMUNICATION OR TO EXPRESS OUR FILLINGS.
+
+PROGRAMMING -> it is a set of instructions which is used to perform some specific task.
+PROGRAMMING LANGUAGE -> It is a set of instructions which we provide set of instruction to machine/computer.
+
+Assembler -> It is a software / tool which is used to convert mid level language to machine understandable language.
+ 
+-> Compiler - It is a software / Tool which is use to convert our high level language to machine understandable language.
+
+Jdk -java development TOOL kit
+                 -  JRE + JVM
+                    --> DEvelopment Tools
+                    -> Java compiler
+
+JRE -> java Runtime Environment
+              -  JVM
+             -> library files
+             -> Byte Code Varifier
+             -> Class Loader
+
+JVM -> java virtual Machine    -> it is a set of software
+                                 help to executing the java program
+
+
+         execution always Started From the main method
+         JVM main ko call krta h if code have no main code will compile but not execute
+         
+-> control executed in linear mean sequential way
+-> without main program will compile but not run
+
+package -> collection of predefined libraries or classes
+
+    
+    - Ext must compulsrily be .java
+    - compiler generate bytecode for our program
+ 
+ "Bytecode"
+ 
+  -  Bytecode saved separate file with the exe .class file
+  -  The name of the .class file or bytecode file is same as the name of the class defined by the programmer
+  -  Number of .class file = Number of classes defined by the programmer
+  
+  
+  _________________________________________________________
+  
+  
+              DATA TYPES 
+              
+  -> Primitive Data types
+            - Numeric   -> int - byte, short,int,long
+                        -> Real numbers - float, double
+                        
+            - Non Numeric -> Char
+                          -> Boolean
+                
+  -> Non Primitive Data types
+             - class
+             - Array
+             - integer
+             - enum
+             
+  -> Java supports 61 spoken language 
+  -> In java conditions always return True and False
+  
+_________________________________________________________
+
+                 TYPE CONVERSION
+                 
+    Converting the data types of a value to some other types is called as type conversion             
+  
+  Types of type conversion
+         -> Implicit Conversion(Done by Compiler)
+              
+               - When value be Compatible/ convertable
+               - When The value of RHS of assignment operator being smaller data type compared to the data type of the variable on LHS
+                        lossy conversion - jb bade data type ko chhote me conversion
+                        
+         -> Explicit Conversion(By programmer)
+         
+ __________________________________________________________
+
+header file = packages
+UNICODE RANGE(a-z) 65-90
+
+
+any non decimal number treated by compiler like integer.
+      IN UNICODE WE HAVE 32,000+ UNICODE
+  
+ What is an expression?
+ An statement containing operator and operands is an expression.
+ 
+ for ex: 
+  c = a+b;
+  
+  
+  if our expression contains operands of different data types then before evaluating the expression java converts them to higher type and then
+   evaluates the expression.
+  
+ ____________________________________
+ 
+ ACCEPTING INPUT FROM THE USER
+ 
+ -> using COMMAND LINE ARGUMENT
+ -> Using "Scanner" class
+ -> GUI controls
+ 
+ 
+  1. using COMMAND LINE ARGUMENT
+   
+   
+public class par1 {
+	public static void main(String[] args) {
+		System.out.println("Hello"+ args[0]);
+		System.out.println("Hello"+ args[1]);
+		System.out.println("BYE");
+	}
+}
+
+class Demo {
+      public static void main(String [] args){
+               int a = 25;
+         System.out.println("Value of a is "+ a);
+      }
+}
+
+
+class Sum {
+      public static void main(String [] args){
+         int a = 25,b=20;
+         System.out.println("Sum of a and b is "+ (a+b));
+      }
+}
+
+in java we don't have garbage value
+
+
+-:> Accepting string input
+ 1)
+ 
+  
+  class Test{
+        public static void main(String[] args){
+        Scanner kb = new Scanner(System.in);
+        String name;
+        System.out.println("Enter your name");
+        name = kb.nextLine();     // agar string me spaces h tb bhi pura read karega nextline
+        System.out.printlnI("Hello"+name);
+        }
+  }
+
+    ->      Accepting Character From User
+  
+    class Test{
+        public static void main(String[] args){
+        Scanner kb = new Scanner(System.in);
+        String str;
+        System.out.println("Enter a character");
+        str = kb.next();
+        char ch;
+        ch=str.charAt(0);
+//        name = kb.nextLine();     // agar string me spaces h tb bhi pura read karega nextline
+        
+        System.out.printlnI("you entered:"+ch);
+        System.out.println("Its UNICODE is:"+(int)ch);
+        }
+  }
+  
+  2}
+    import java.io.Exception
+    
+      class Test{
+        public static void main(String[] args)throws Exception{
+        char ch;
+        ch=System.in.read();        
+        System.out.printlnI("you entered:"+ch);
+        System.out.println("Its UNICODE is:"+(int)ch);
+        }
+  }
+  
+  
+  ____________________________________________________
+   
+   All the data i& methods which belong to Math class are static by nature. Thus we will never create any object of the Math class while accessing these members.
+    
+    
+                
+                
+                OPERATORS
+                
+       -> Arithmetic->    - ,+, *, /, %
+       -> Relational Op -> >,<, >= ,<=,==,!=
+       -> Logical -> &&,|| , !
+       -> Shorthand op -> +=,-=,*=,/=,%=
+       -> Increment/Decrement -> ++ , --
+       
+       ______________________________
+       
+           LOOPS
+           
+     -> Loops are also called as iterative and they allow us to execute piece of code more than 1 time.\
+     
+         - Types
+            - Entry Controlled Loop: while,for
+            - Exit Controlled Loop: do..while 
+   
+     while - boolean expression is complsry in java
+     
+  1>
+     
+     class LoopDemo{   
+           public static void main(String[]args){
+               int i=1;
+               while(i<=10){
+                  System.out.println(i);
+                  i++;
+               }
+           }
+     }
+     
+     
+     2> 
+       import java.util.Scanner;
+       class Factorial
+       {
+           public static void main(String[] args)
+           {
+              Scanner kb = new Scanner(System.in);
+              int n,f=1;
+              System.out.println("Enter a no.");
+              n = kb.nextint();
+              while(n>1)
+              { 
+                  f = f*n;
+                  n--;
+                 }
+                 System.out.println("fact is "+f);
+           }
+       }
+      
+   ______________________________________
+      
+      -> for loop
+              for(int;test cond;stmt){}
+              
+              
+        class ForLoopDemo{
+              int i;
+              for(i=1;i<=10;i++){
+                 System.out.println(i);
+              }
+              system.out.println("Outside Loop i is"+i);
+        }
+       }
+         
+-->
+            import java.util.Scanner;
+            class AddNos{
+                 public static void main(){
+                     Scanner kb = new Scanner(System.in);
+                     int n, sum =0;
+                     System.out.println("Enter nos and press 0 to stop");
+                     for( ; ; ){
+                         n = kb.nextInt();	
+                         if(n==0)
+                          break;
+                         sum = sum+n;
+                     }
+                     System.out.println("Sum is "+sum);
+                 }
+            }
+     ________________________________________________________________________________________________
+   
+   
+             
+             TYPE CASTING
+             
+    -> CONVERSION OF ONE DATA TYPE TO ANOTHER DATA TYPE
+    
+        - PREMITIVE
+                CONVERSION OF ONE PREMITIVE DATA TYPE TO ANOTHER DATA TYPE 
+           
+                      -> DATA WIDENING  -- conversion of lower to higher  
+                                         eg :- byte b = 127;
+                                               int i = b; 
+                                               i = i+50;
+                                        -- data widening can be achieve in 2 ways implicit or explicitly
+                                        
+                      -> NON NARROWING  -- conversion of higher to lower 
+                                        -- it can be achieved by explicitly only.
+               
+        - NON-PREMITIVE -> UP CASTING
+                        -> DOWN CASTING
+                        
+   _______________BYTE < SHORT < INT < LONG < FLOAT < DOUBLE____________________           
+        
+        note- we cannot convert boolean dt or we can say on boolean dt premitive type casting is not possible.
+        
+        -> Every else stmt should have one if stmt
+        -> Nested if -> Any conditional stmnt within the other conditional stmt make it nested in nature.
+        
+        
+  ____________Switch__________
+  
+  switch(var_name){
+       case value:
+        ----
+        ----
+        break:
+       case value:
+        ----
+        ----
+        break:
+        
+        default:
+    }
+     
+ To swith stmt is similar to if statement ,as it is also a decision control stmt.
+ it allows a variable to be tested against a list of values where each value is called a case.         
+        
+        
+_______________________________________________________________        
+        
+        STRING CLASS USE
+        
+   class Test {
+        public static void main(String[] args){
+              String s1;
+              s1 = new String("Bhopal");
+              String s2;
+              s2 = new String("Bhopal");
+              System.out.println(s1);
+              System.out.println(s2);
+              System.out.println(s1==s2);              
+        }
+   }
+        Whenever we display String object reference, Java will never show the address that refrence is holding. Rather Java will ALWAYS print the contents of the STRING OBJECT to which that reference is pointing. However, when we compare 2 reference then, Java doesn't compare the object's data rather it then compares the addresses stroed in thoe references.
+        
+_____________________________________________________     
+    _______________Using/ Calling String Methods
+
+1.public int length():
+
+This is a non-static method belonging to String and it return the length (no of characters) stored inside the String object
+
+class Demo{
+      public static void main(String[] args) {
+	String name=new String("Sachin"); 
+    System.out.println(name);
+    int x;
+    x=name.length();
+    System.out.println(x);
+}
+}
+_______________________________________
+2. public char charAt(int): -> This is a non static method of String class and it accepts an index no as argument and returns the character present at that index.
+
+class Demo{
+public static void main(String[] args) {
+	String name=new String("Sachin");
+    char ch;
+    ch=name[0]; //ERROR, becuase the operator[] only works with array 
+    ch=name.charAt(0);
+    System.out.println(ch); OK, will display 'S'
+    ch-name.charAt(3);
+    System.out.println(ch); OK, will display 'h'
+    ch-name.charAt(7); // EXCEPTION, StringIndexOutOfBoundsException
+    System.out.println(ch);
+}
+}
+        ______________________________________
+
+3. public boolean equals(String)
+
+This is a non static method of String class and it compares / matches the contents of 2 string objects.
+
+These are calling object and the object passed as argument.
+
+If both the objects contain EXACTLY SAME CHARACTERS, then equals() returns true otherwise it will return false
+
+class Test{
+    public static void main(String[] args)
+    { 
+       String s1;
+       s1=new String("Bhopal");
+       String s2;
+       s2=new String("Bhopal");
+       System.out.println(s1);
+       System.out.println(s2); 
+       boolean ans;
+       ans=s1.equals(s2);
+       }
+}
+      
+      ____________________________
+      
+   4. public boolean equalsIgnoreCase(String)
+
+This method is also non static method of String class ,but it compares 2 strings in a case insensitive way
+
+class Test{
+    public static void main(String[] args){
+    String s1;
+    s1=new String("Bhopal");
+    String s2;
+    s2=new String("bhopal");
+    System.out.println(s1);
+    System.out.println(s2);
+    boolean ans;
+    ans=s1.equalsIgnoreCase(s2);
+    System.out.println(ans);  // True
+   }
+}
+
+class Test {
+     public static void main(String[] args) {
+     String s1;
+     s1=new String("Bhopal");
+     String s2;
+     s2=new String("Bhojpal");
+     System.out.println(s1);
+     ans=s1.equalsIgnoreCase(s2);
+     System.out.println(s2);
+     boolean ans;
+     System.out.println(ans); //false
+}  
+        
+ public class ye { 
+      public static void main(String args[]) {
+	     String s1 = new String("Bhopal");
+	     String s2 = new String("Bhopal");
+	     System.out.println(s1);
+	     System.out.println(s2);
+	     System.out.println(s1==s2);
+	
+	     boolean ans;
+	     ans = s1.equals(s2);
+	     System.out.println(s2);
+}
+}
+        
+______________________________________________________________________________________________________________________
+        
+                           ARRAY
+
+In Java, an array, just like C/C++ is a collection of homogeneous data elements stored at continuous memory locations.
+
+But in Java arrays are objects. Thus there are some more important points we must understand about arrays in Java:
+
+1. Since arrays are objects, they too are dynamically created using the keyword new.
+
+2. In Java, for arrays also we have to create a reference and then using that reference we point to
+    the actual array which is stored in HEAP area.        
+        
+
+Question ->What is the difference between int[] arr and int arr []?
+             Although in t[] arr and int ar[] both are same, but the following2 are different: int [] arr,brr;
+              // In this case both "arr" and "brr" references to array of integers
+
+But
+  int arr[], brr; // In this case "arr" is reference to an array of integers but "brr" is just an int var.
+
+Question -> Why we can't write int arr[10] in Java like we write in C? I
+
+Ans -->  In Java "arr" is not the array, rather it is the reference to an array. So how can we give size to a reference? On the other hand in C lang if we write
+
+int arr[10];
+
+Then "arr" is the name of the array itself and so we can give it some size.
+
+        
+ _________________WRAPPER CLASSES________________
+ 
+ 
+Wrapper classes in Java are those special classes which are available in the package java.lang and
+they have their names similar to the PRIMITIVE DATA TYPES.
+
+For eg:-  -> corresponding to the data type int, Java gives us a class called Integer. 
+         -> Similarly we have Wrapper classes for other data types.
+         -> What Are The Uses Of Wrapper Classes
+         -> Wrapper classes in Java are OBJECT ORIENTED representation of primitive data types and these
+
+classes are used for 2 purposes:
+
+           1. To convert (type-cast) a variable into an object.
+           2. To convert String representation of a value to its primitive form
+        
+        
+        
+ QUESTION -- How To Use String Class Methods?
+
+In Java, String is a very useful predefined class and it contains a huge collection of built-in 
+methods which help use perform various operations on Strings. But maximum of these methods are NON-STATIC by nature.
+This means that in order to call these methods we will have to create OBJECT of String class.
+
+Thus we must first learn HOW TO CREATE OBJECTS IN JAVA which is a bit different than creating objects in PYTHON or C++.
+
+

@@ -1,0 +1,20 @@
+
+Jdk -java development TOOL kit
+                 - JRE + JVM
+                 --> DEvelopment Tools
+                 -> Java compiler
+
+JRE -> java Runtime Environment
+              -JVM
+             -> library files
+             -> Byte Code Varifier
+             -> Class Loader
+
+JVM -> java virtual Machine    -> it is a set of software
+                                 help to executing the java program
+
+
+
+execution always Started From the main method
+->control executed in linear mean sequential way
+->

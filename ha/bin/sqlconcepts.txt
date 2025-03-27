@@ -1,0 +1,147 @@
+                                        SQL 
+                                        
+   SQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data.
+
+                   3 TIER APPLICATION
+                   
+        1. frontend   -> User Interface
+        2. Middileware -> Programming - java, python, jdbc,javascript,c++
+        3. Backend -> DATABASE - DATA
+        
+   DATA - Data is a rawfact which describes Attribute/Properties of an Entity/Object.
+       Data - rawfact, Properties - Attributes, Object - Entity
+       
+    DATABASE - It is a place where we will be store the data in systemetic and organized manner.
+          -> OPERATIONS  - CREAT / Insert
+                         - READ / Retrive
+                         - UPDATE / Modify
+                         - DELETE / Drop
+    
+    
+    DATABASE MANAGEMENT SYSTEM 
+          - It is a software to maintain and manage the Database
+          factors 
+                 -> Security
+                 -> Authorization
+          - We us query Language to communicate.
+          
+          
+     TYPES OF DBMS 
+        -> NDBMS (N/W)
+        -> HDBMS(HIERARCHICAL)
+        -> OODBMS(OBJECT ORIENTED)
+        -> RDBMS(RELATIONAL)
+        
+    
+    
+    
+ RELATIONAL DBMS -> 
+    RDBMS is a a type of DBMS S/W where Data will be stored in a form of tables. 
+    •Factors 
+       -> Security 
+       -> Authentication
+ 
+ → we use SQL to Communicate
+
+   -> Relational Model
+           It is a concept designed by Date Scientist "E.F.CODD" 
+           in Relational model we store the Data in the form of Tables.
+
+
+A dbms shoftware which follows Relational model becomes Relational Dbms (RDBM).
+
+     DBMS (follows)_____ Relational Models_____RDBMS
+
+
+    -> Terminologies
+         - Tables
+         - Columns
+         - Rows
+         - Cell
+         - Entity
+         
+     TABLE -> Table is a logical organization of Data which consist of Rows and Columns.
+    
+     Columns -> Columns is Also reffered as Attributes or fields. A column used to represent one property of all the entities.
+
+     Rows -> Rows is also Reffered as Records or Tupples. A tupple row is used to represent all the properties of single entity.
+
+     Cell -> Cell is the Smallest unit Table in which we store data. 
+    
+     The Inter -> section of Raws and columns Generate cells.
+     
+     Entity -> Anything which has its Existance,
+
+    _____________RULES OF E.F CODD
+
+     ->  The Data stored in the cell must be a Single Value Date.
+     ->  In RDBMS we store everything in the form of tables  including metadata. (The details about the data is METADATA)
+     ->  Acc. to E.F. codd we can store data in multiple tables. If needed we can establish connection b/w two tables using key Attributes. 
+         
+
+        
+      ___________ STATEMENT________________
+
+statements are used to perform CRUD operations In Database.
+
+  -> Statement in SQL:
+            - Data Definition Langauge
+            - Data Manipulation Language
+            - Transaction Control Language
+            - Data Control Language
+            - Data Query Language
+
+ -> Data Query Language
+        - This statement is used to Retrieve the data from data base.
+
+statements:-
+            - Select
+            - Projection
+            - Selection
+            - Joins
+
+Select :-  This statement is used to retrieve the Data from database and display it.
+
+Projection: This statement is used to retrieve the data from database by selecting onlyb Column.
+            All the values in the column will be selected by default
+
+Selection :- By selecting Both columns as well as Records. 
+
+Joins:- This statement is used to retrieve the data from multiple Tables simultaneously.
+
+(Note - QUERY IS A CONDITION THAT IS WRITTEN BY FOLLOWING SOME SYNTAX TO RETRIEVE THE DATA FROM DATABASE ) 
+
+
+1. FROM CLAUSE STARTS THE EXCECUTION.
+
+2. FOR FROM CLAUSE WE CAN PASS TABLE NAME AS AN ARGUMENT.
+
+3. THE JOB OF FROM CLAUSE IS TO GO TO THE DATABASE AND SEARCH FOR THE TABLE AND PUT THE TABLE UNDER EXECUTION. 
+
+4. SELECT CLAUSE EXCECUTES AFTER THE EXCECUTION OF FROM CLAUSE.
+
+5. FOR SELECT CLAUSE WE CAN PASS ASTERISK(*), COLUMN NAME AND EXPRESSION AS AN ARGUMENT.
+
+6. THE JOB OF SELECT CLAUSE IS TO GO TO THE TABLE WHICH IS UNDER EXCECUTION AND SELECT THE DATA AND DISPLAY.
+
+7. SELECT CLAUSE IS RESPONSIBLE FOR THE RESULT TABLE.
+
+_______________________________________________________________________________________________________________________
+
+PROJECTION
+
+SYNTAX:
+
+SELECT
+
+* / [DISTINCT] COLUMN_NAME /
+
+FROM TABLE_NAME ;
+
+EXPRESSION
+
+[ALIAS]
+
+Order of execution:
+   1-FROM
+   2-SELECT

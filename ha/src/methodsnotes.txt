@@ -1,0 +1,43 @@
+                               METHOD
+                               
+ 
+ANONYMOUS CLASS - A CLASS WHICH HAS NO NAME.
+INITIALIZER BLOCK -> in java instance initializer blocks are used to initialize instance data members or say objects.
+           -> it runs each time when an object of class is created.
+           -> The whole block is copied inside each constructor of the class.
+           
+              
+              
+              
+___________________________________________________
+                         OBJECT ORIENTED PROGRAMMING
+                         
+  IT IS A METHODOLOGY TO DEVELOP A SOFTWARE OR A PROGRAMMS.
+  IN THIS EVERY COMPONENT IS CONSIDERED TO BE AN OBJECT AND HAS A SET OF ATTRIBUTES/PROPERTIES AS WELL AS A SET OF FUNCTIONS TO WORK UPON THOSE ATTRIBUTES.
+  
+  FOR EXAMPLE :-
+         TO DESIGN A S/W FOR A COMPANY 
+               1. EMPLOYEES 
+               2. PROJECTS
+               3. DEPARTMENTS
+               4. EXTRA ACTIVITIES
+               
+ SYNTAX OF A CLASS :- 
+  
+     <ACCESS_MODIFIER> <DATA_TYPE><VAR_NAME>
+          <ACCESS_MODIFIER> <DATA_TYPE><VAR_NAME>
+          
+          
+      <ACCESS_MODIFIER> <RETURN_TYPE><METHOD NMAE>{<ARGS>}
+      {
+           //METHOD BODY
+      }
+      
+      
+      
+    __________________________________________
+    
+    ACCEPTING I/P FOR ENTITY CLASS
+    
+  
+    

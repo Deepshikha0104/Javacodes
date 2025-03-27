@@ -1,0 +1,1242 @@
+                           Shortcuts 
+                              
+      -> sysout ctrl+space - system.out.println
+      -> ctrl +shift+x - convert into Uppercase
+      -> ctrl+shift+y - lower case
+      -> ctrl+shif+f - format set
+      -> ctrl+l - go to line number
+      -> ctrl+1 - fix code
+      -> ctrl+alt+down - copy lines
+      -> ctrl + alt + up - copy lines
+      -> ctrl + f11 - Run
+      
+__________________________________________________________________________________________________________________________________________
+    
+    
+                                                 SQL NOTES 
+
+                                                 
+                                               SQL 
+                                        
+   SQL stands for Structured Query Language. It is the standard language for relational database management systems.
+   It is especially useful in handling organized data comprised of entities (variables) and relations between different
+   entities of the data.
+
+                   3 TIER APPLICATION
+                   
+        1. frontend   -> User Interface
+        2. Middileware -> Programming - java, python, jdbc,javascript,c++
+        3. Backend -> DATABASE - DATA
+        
+   DATA - Data is a rawfact which describes Attribute/Properties of an Entity/Object.
+       Data - rawfact, Properties - Attributes, Object - Entity
+       
+    DATABASE - It is a place where we will be store the data in systametic and organized manner.
+          -> OPERATIONS  - CREAT / Insert
+                         - READ / Retrieve
+                         - UPDATE / Modify
+                         - DELETE / Drop
+    
+    
+    DATABASE MANAGEMENT SYSTEM 
+          - It is a software to maintain and manage the Database.
+          *factors 
+                 -> Security
+                 -> Authorization
+          - We use query Language to communicate.
+          
+     TYPES OF DBMS 
+        -> NDBMS (N/W)
+        -> HDBMS(HIERARCHICAL)
+        -> OODBMS(OBJECT ORIENTED)
+        -> RDBMS(RELATIONAL)
+        
+  
+ RELATIONAL DBMS -> 
+    RDBMS is a a type of DBMS S/W where Data will be stored in a form of tables. 
+    •Factors 
+       -> Security 
+       -> Authentication
+ 
+ → we use SQL to Communicate RDBMS.
+
+   -> Relational Model
+           It is a concept designed by Date Scientist "E.F.CODD" 
+           in Relational model we store the Data in the form of Tables.
+
+      A DBMS software which follows Relational model becomes Relational Dbms (RDBM).
+
+      DBMS (follows) ===> Relational Models ===>(Becomes)RDBMS
+
+     -> Terminologies
+         - Tables
+         - Columns
+         - Rows
+         - Cell
+         - Entity
+         
+     TABLE -> Table is a logical organization of Data which consist of Rows and Columns.
+    
+     Columns -> Columns is Also reffered as Attributes or fields. A column used to represent one property of all the entities.
+
+     Rows -> Rows is also Reffered as Records or Tupples. A tupple row is used to represent all the properties of single entity.
+
+     Cell -> Cell is the Smallest unit Table in which we store data. 
+             -> The Inter-section of Raws and columns Generate cells.
+     
+     Entity -> Anything which has its Existance.
+
+    _____________RULES OF E.F CODD
+
+     ->  The Data stored in the cell must be a Single Value Date.
+     ->  In RDBMS we store everything in the form of tables  including metadata. (The details about the data is METADATA)
+     ->  Acc. to E.F. codd we can store data in multiple tables. If needed we can establish connection b/w two tables using key Attributes. 
+     ->  We can enter the data into 2 steps 
+           - BY ASSIGNING DATA TYPES
+           - BY ASSIGNING CONSTRAINTS
+        
+      ___________ STATEMENTS
+
+ Statements are used to perform CRUD operations In Database.
+
+  -> Statement in SQL: 
+            - Data Definition Language (DDL)
+            - Data Manipulation Language(DML)
+            - Transaction Control Language (TCL)
+            - Data Control Language (DCL)
+            - Data Query Language(DQL)
+
+ -> Data Query Language
+        - This statement is used to Retrieve the data from database.
+
+statements:-
+            - Select
+            - Projection
+            - Selection
+            - Joins
+
+Select :-  This statement is used to retrieve the Data from database and display it.
+
+Projection: This statement is used to retrieve the data from database by selecting only Column.
+            All the values in the column will be selected by default
+
+Selection :- By selecting Both columns as well as Records. 
+
+Joins:- This statement is used to retrieve the data from multiple Tables simultaneously.
+
+(Note - QUERY IS A CONDITION THAT IS WRITTEN BY FOLLOWING SOME SYNTAX TO RETRIEVE THE DATA FROM DATABASE ) 
+
+
+1. FROM CLAUSE STARTS THE EXCECUTION.
+2. FOR FROM CLAUSE WE CAN PASS TABLE NAME AS AN ARGUMENT.
+3. THE JOB OF FROM CLAUSE IS TO GO TO THE DATABASE AND SEARCH FOR THE TABLE AND PUT THE TABLE UNDER EXECUTION. 
+4. SELECT CLAUSE EXCECUTES AFTER THE EXCECUTION OF FROM CLAUSE.
+5. FOR SELECT CLAUSE WE CAN PASS ASTERISK(*), COLUMN NAME AND EXPRESSION AS AN ARGUMENT.
+6. THE JOB OF SELECT CLAUSE IS TO GO TO THE TABLE WHICH IS UNDER EXCECUTION AND SELECT THE DATA AND DISPLAY.
+7. SELECT CLAUSE IS RESPONSIBLE FOR THE RESULT TABLE.
+
+_______________________________________________________________________________________________________________________
+
+PROJECTION
+
+SYNTAX:
+          SELECT
+          * / [DISTINCT] COLUMN_NAME /
+          FROM TABLE_NAME ;
+
+
+Order of execution:
+   1-FROM
+   2-SELECT        
+   
+1 -> Desc table_name;  (ALL THE TABLE NAME ALONG WITH THE DATATYPES ASSIGNED FOR EACH COLUMN)
+2 -> SELECT * FROM TAB;  (ALL THE TABLE NAMES PRESENT INSIDE DATABASE)
+3 -> SELECT * FROM TABLE_NAME;  (THE ENTIRE TABLE STRUCTURE)
+__________________________________________________________________________________________________________________________
+
+
+                                   EXPRESSION 
+                                   
+   EXPRESSION is a perform the task which gives result.
+       types --> 
+              -> Operators (+,-,*,/)
+              -> Operands
+                  - Column names,literals/Direct values 
+                          literals - number,char,date (''    always write in single quotes) 
+                         
+__________________________________________________________________________________________________________________________
+
+                                   ALIAS 
+                                   
+Alias -> alternative name -> Column/Expression -> Result Table
+
+Alias is an alternative name given to a column or an expression in the result table.
+-> Alias name can be used with or without using 'AS' Keyword .
+-> Alias name should be a single word or a string enclosed within double quotes.
+-> Alias is not mandatory but recommended to provide.                
+
+______________________________________________________________________________________________________________________________
+
+                                  DISTINCT
+                                  
+ To remove repeated values or duplicated values in Result Table We use Distinct Clause.
+
+-> For distinct clause we can pass Column name or an expression aв an Argument.
+-> Distinct clause should be used as the first argument in the Select clause.
+-> We Can pass multiple columns for distinct clause.
+-> It removes the Combination of duplicates from all the Columns.
+
+_______________________________________________________________________________________________________________________________
+
+                              SELECTION
+                 
+                   WHERE
+                   
+Where Clause This is used to filter the Records.
+
+Note:- 
+    -> For where clause we can pass filter condition as an argument
+    -> where Clause Executes Row_by_Row.
+    -> where clause Executes after the Execution of from clause.
+    -> We can pass multiple conditions for where clause Using logical operators.
+
+    Syntax -:
+             Select */ [Distinct] column_Name / Expression [Alias]
+             from table_name
+             where< filter_Condition > ;
+                            
+                    OREDER OF EXECUTION
+                      - From
+                      - Where
+                      - Select
+                      
+   NOTE --> SQL IS NOT CASE SENSITIVE WHERE AS DATA IS CASE SENSITIVE.
+        --> IT IS NOT POSSIBLE TO PASS ALIAS NAME IN WHERE CLAUSE BECAUSE ALIAS NAME IS USE THEN SELECT 
+            CLAUSE AND SELECT CLAUSE WILL EXECUTE AFTER THE EXECUTION OF WHERE CLAUSE.
+            
+        --> DD-MON-YY
+        --> DD-MON-YYYY
+      
+ _______________________________________________________________________________________________________________________________
+ 
+                             OPERATORS
+                             
+
+     -> Arithmetic Operators (+, -, *, /)
+     -> Comparison operator (=, !=)
+     -> Relational operator (<, >, <=,>=)
+     -> Logical operator (AND, OR, NOT) 
+     -> concatination operator (||)
+     -> Special operator( In, NOT IN, Between, not between, like, not like, IS ,IS NOT)
+     -> Sub-Query OPERATOR (All, Any Exists, not Exists)
+    
+    
+   # Logical operator (AND)
+            - AND It is also known as binary multiplication. 
+            - True, if both the Conditions are true.
+            - And operator returns true if both the Conditions are True
+            - And operator should always be used b/w conditions.
+          SPECIAL WORDS SIGN 
+                          - IN,INTO,ONTO,AS
+                                               
+    # OR OPERATOR ( || )
+          - It is also known as BINARY ADDITION. 
+          - IT RETURNS TRUE IF ANY CONDITION IS SATISFIED OR (TRUE).
+          - IT SHOULD ALWAYS BE USED IN B/W CONDITION.
+          
+          
+    #  IN Operator
+
+     - In operator is a multivalued operator in which we can pass multiple values at RHS.
+        - i.e. In Operator Can Accept multiple Values of RHS.
+        -  In operators Returning. TRUE. If any one of the condition is Satisfied.
+        -  In operator allows the Values present at LHS to be Compared with all the Valued present at RHS.
+
+      Syntax -    Column name/expression IN (V1,V2,V3);
+
+    # NOT IN OPERATOR 
+    
+             - NOT In operator is Similar to IN operator But it Rejects the value instead of selecting it.
+              Syntax -    Column name/expression NOT IN (V1,V2,V3);
+             
+    # BETWEEN OPERATOR
+            - Between Operator is used with when ever we have Ranges Between operator works including the Ranges.
+            - The Range Cannot Be Inter changed.
+
+           SYNTAX -  Column_name/expression BETWEEN lower_range AND higher_range;
+           
+    # NOT BETWEEN OPERATOR
+            - IT IS SIMILAR TO BETWEEN OPERATOR BUT IT REJECTS THE VALUE INSTEAD OF SELECTING IT.
+            
+           SYNTAX -  Column_name/expression NOT BETWEEN lower_range AND higher_range;
+           
+    # IS OPERATOR 
+           - IS NOT OPERATOR IS USED ONLY TO COMPARE WITH NULL.
+           SYNTAX - COLUMN_NAME / EXPRESSION IS NULL;
+           
+    # IS NOT OPERATOR 
+           - IS NOT OPERATOR IS SIMILAR TO IS OPERATOR BUT IT REJECTS THE VALUE INSTEAD OF SELECTING IT .
+           SYNTAX - COLUMN_NAME / EXPRESSION IS NOT NULL ;
+   
+    # LIKE OPERATOR 
+           Like operator is used when Ever we need to "MATCH_THE_PATTERN" ;
+
+           Syntax -> Column_name /expression LIKE "Pattern_to_Match" ;
+           - To Achieve the pattern matching we use special characters Such as
+
+          Percentile (%): - It can Accept Any character, Any number of Times or No character Also.
+          Underscore (_):- It can Accept any character But only once.
+           
+            
+    # NOT LIKE OPERATOR
+            - IT IS SIMILAR TO LIKE OPERATOR BUT IT REJECTS THE VALUE INSTEAD OF SELECTING IT.
+           Syntax -> Column_name /expression NOT LIKE "Pattern_to_Match" ;
+            
+___________________________________________________________________________________________________________________________________
+
+                         Functions
+
+      Set of Instructions perfrom specific Task.
+      There are Two Types of functions 
+            -> User Defined function.
+            ->In Build Function.
+                   -  Single Row function 
+                   -  Multi Row function.
+
+It is the List of Instructions that are used to perform the Specific Task.
+        
+      **  SINGLE-ROW FUNCTIONS
+
+        -> SINGLE ROW FUNCTIONS EXCECUTES ROW-BY-ROW. 
+        -> IT TAKES ONE INPUT EXCECUTES AND GENERATES ONE OUTPUT THEN GOES TO THE NEXT INPUT.
+        -> IF WE PASS 'n' NO. OF INPUTS TO SINGLE ROW FUNCTION, IT RETURNS 'n' NO. OF OUTPUTS.
+        
+      ** MULTI-ROW FUNCTIONS
+
+        -> MULTI-ROW FUNCTIONS IS ALSO KNOWN AS GROUP FUNCTION or AGGREGATE FUNCTIONS. 
+        ->IT EXCECUTES GROUP BY GROUP
+        -> IT TAKES ALL THE INPUTES AT ONCE AGREGATES IT (COMBINE) AND GENERATES ONE OUTPUT.
+        -> IF WE PASS 'n' NO. OF INPUTS TO MULTI ROW FUNCTION, IT RETURNS A SINGLE OUTPUT.
+        
+     ---> LIST OF MULTI ROW FUNCTIONS/GROUP/AGGRIGATE FUNCTIONS
+
+        1.MAX()
+        2.MIN()
+        3.SUM()
+        4.AVG()
+        5.COUNT()
+     NOTE :-     
+       1. MULTI ROW FUNCTIONS CAN ACCEPT ONLY A SINGLE ARGUMENT THAT IS A COLUMN NAME or AN EXPRESSION.
+       2. MAX() AND MIN() FUNCTIONS CAN BE USED FOR ALL THE FOLLOWING DATATYPES PROBLEM.
+          i.e, CHAR, VARCHAR, NUMBER AND DATE.
+       3. SUM() AND AVG() FUCTIONS CAN ONLY TAKE NUMBER COLUMN AS AN ARGUMENT.
+
+     **4. MUTLTI-ROW FUNCTIONS WILL IGNORE THE NULL VALUE.
+       5. WE CANNOT USE MULTI ROW FUNCTIONS IN WHERE CLAUSE. *
+       6. WE CANNOT USE ANY COLUMN NAME WITH MULTI ROW FUNCTIONS IN SELECT CLAUSE.
+       7. COUNT() IS THE ONLY MRF TO WHICH WE CAN PASS AS AN ARGUMENT.
+      
+  -> WE CANNOT PASS MULTI ROW FUNCTION IN WHERE CLAUSE BECAUSE WHERE CLAUSE EXECUTES ROW_BY_ROW WHERE AS MULTIROW FUNCTIONS 
+       EXECUTES GROUP_BY_GROUP .
+______________________________________________________________________________________________________
+          
+        ->  GROUP BY CLAUSE
+
+        WE USE GROUP BY CLAUSE TO GROUP THE RECORDS.
+
+        >IT EXCECUTES ROW BY ROW.
+
+        >FOR GROUP BY CLAUSE WE CAN PASS COLUMN NAME OR AN EXPRESSION AS AN ARGUMENT
+
+        > WE CAN WRITE GROUP BY EXPRESSION ALONG WITH MULTI-ROW FUNCTION IN SELECT CLAUSE
+
+      --> GROUP_BY_EXPRESSION:
+          ANY COLUMN NAME OR EXPRESSION WHICH IS WRITTEN IN GROUP BY CLAUSE IS KNOWN AS GROUP BY EXPRESSION.
+
+        > AFTER THE EXCECUTION OF GROUP BY CLAUSE IT CREATE GROUPS AND IF ANY CLAUSE
+        EXCUTES AFTER GROUP BY CLAUSE IT EXCECUTES GROUP BY GROUP.....
+  
+  SYNTAX -> 
+          SELECT GROUP_BY_EXPRESSION/GROUP FUNCTION
+          FROM TABLE_NAME
+          [WHERE <FILTER_CONDITION>]
+          GROUP BY COLUMN_NAME/EXPRESSION; 
+    
+    ORDER OF EXECUTION :-
+          1.  FROM           ROW_BY_ROW
+          2.  WHERE          ROW_BY_ROW
+          3.  GROUP BY       GROUP_BY_GROUP
+          4.  SELECT         
+          
+ _____________________________________________________________________________________________
+                HAVING CLAUSE
+
+>WE USE HAVING CLAUSE TO FILTER THE GROUPS.
+
+>WE CAN PASS MULTI-ROW FUNCTION CONDITION IN HAVING CLAUSE.
+>IT EXCECUTES GROUP BY GROUP. 
+> IF UR USING HAVING CLAUSE IT SHOULD BE USED AFTER GROUP BY CLAUSE.
+> IT CANNOT BE USED WITHOUT GROUP BY CLAUSE.
+
+SYNTAX:-
+
+SELECT GROUP_BY_EXPRESSION FROM TABLE_NAME
+GROUP_FUNCTION
+[WHERE <FILTER_CONDITION>]
+GROUP BY column_name/expression 
+HAVING <GROUP_FILTER_CONDITION>
+
+
+ORDER OF EXECUTION:
+1-FROM                      
+2-WHERE (if used)       ROW_BY_ROW          
+3-GROUP BY              ROW_BY_ROW
+4-HAVING                GROUP
+5-SELECT                GROUP
+
+________________________________________________________________________________________________________________
+                  SUB QUERY
+                         
+ A QUERY WHICH IS WRITTEN INSIDE ANOTHER QUERY IS KNOWN AS SUB-QUERY.
+
+WORKING PROCEDURE:
+
+HERE WE WLL BE HAVING MINIMUM OF 2 QUERIES
+
+1.OUTER QUERY
+2.INNER QUERY/SUB-QUERY
+
+> INNER QUERY WILL EXCECUTE FIRST AND GENERATE THE OUTPUT
+> THE O/P GENERATED BY THE INNER QUERY WILL BE GIVEN AS I/P TO THE OUTER QUERY
+> THE OUTER QUERY WLL EXCECUTE AND GENERATE THE O/P.
+> THIS O/P WLL BE THE RESULT.
+> BY THIS WE CAN SAY THE OUTER QUERY IS DEPENDENT ON INNER QUERY.
+
+
+----> WHY SUB QUERY
+ CASE 1:- WHENEVER WE HAVE UNKNOWN
+ CASE 2:- WHENEVER DATA IS TO BE SELECTED AND CONDITION NEED TO BE EXECUTED BUT THE DATA ARE PRESENT IN DIFFERENT TABLES WE USE SUBQUERY.
+
+ ----------> NESTED SUB QUERY
+     
+     A SUB QUERY WRITTEN INSIDE ANOTHER SUB QUERY IS KNOWN AS NESTED SUB QUERY.
+        
+        -> WE CAN NEST ABOUT SUB-QUERIES.
+        
+    --------- TYPES OF SUB-QUERY
+
+   THERE ARE 2 TYPES
+
+       1. SINGLE ROW SUB-QUERY 
+       2. MULTI ROW SUB-QUERY
+       
+       > 1.SINGLE ROW SUB-QUERY
+           A SUB-QUERY WHICH RETURNS EXACTLY ONE O/P IS KNOWN AS SINGLE ROW SUB-QUERY.
+           WE CAN USE OPERATORS SUCH AS IN, NOT IN ALL ANY.
+     
+     >  2.MULTI ROW SUB QUERY
+           A SUB-QUERY WHICH RETURNS MORE THAN ONE O/P IS KNOWN AS MULTI ROW SUB QUERY.
+           WE CAN USE OPERATORS SUCH AS IN, NOT IN, ALL, ANY.
+           
+          
+   -> ALL OPEARTOR
+
+     ALL OPERATOR IS A SPECIAL OPERATOR WHICH CAN ACCEPT MULTIPLE VALUES AT RS. IT WLL RETURN TRUE ONLY IF ALL THE CONDITION AT THE RHS IS SATISFIED.
+
+ SYNTAX :-
+         COLUMN_NAME/EXPR.. RELATIONAL OP. ALL (V1, V2,...,Vn);
+         
+   -> ANY OPERATOR
+
+     ANY OPERATOR IS A SPECIAL OPERATOR WHICH CAN ACCEPT MULTIPLE VALUES AT RHS.
+     IT WLL RETURN TRUE IF ANY ONE OF THE CONDITION AT THE RHS IS SATISFIED.
+
+  SYNTAX :-
+           COLUMN_NAME/EXPR.. RELATIONAL OP. ANY (V1, V2,...,Vn);
+          
+          
+___________________________________________________________________________________________________________________________--
+
+
+                     JOINS
+                     
+    - THIS STATEMENT IS USED TO RETRIEVE THE DATA FROM MULTIPLE TABLES SIMULTANEOUSLY.
+
+   TYPES OF J0INS:-
+
+1. CARTESIAN JOIN or CROSS JOIN 
+2. INNER JOIN or EQUI JOIN 
+3. OUTER JOIN  
+        a.LEFT OUTER JOIN
+        b.RIGHT OUTER JOIN 
+        c.FULL OUTER JOIN
+4. SELF JOIN 
+5. NATURAL JOIN
+
+
+-> 1. CARTESIAN JOIN or CROSS JOIN
+
+>IN CARTESIAN JOIN A RECORD FROM TABLE 1 WILL BE MERGED WITH ALL THE RECORDS OF TABLE 2.
+>NO. OF COLUMNS IN RESULT TABLE WILL BE SUMATION (addition) OF COLUMNS PRESENT IN TABLE 1 AND TABLE 2.
+>NO. OF RECORDS IN RESULT TABLE WLL BE THE PRODUCT OF RECORDS PRESENT IN TABLE 1 AND TABLE 2.
+
+   DRAWBACK -> IN THIS JOIN WE WLL BE GETTING ERROR RECORDS.
+   
+ -> INNER JOIN
+
+WE USE INNER J0IN TO OBTAIN ONLY THE MATCHED RECORDS on THE RECORDS WHICH HAS PAIR.
+> WE USE JOIN CONDITION TO OBTAIN THE MATCHED RECORDS.
+
+JOIN CONDITON
+
+->IT IS A CONDITION ON WHICH WE MERGE TWO TABLES TO GET ONLY THE MATCHED RECORDS.
+
+SYNTAX -: FOR JOIN CONDITION
+          TABLE_NAME1.COL NAME = TABLE_NAME2.COL_NAME:
+
+EG: EMP.DEPTNO = DEPT.DEPTNO
+   
+   2.INNER JOIN /EQUAL JOIN
+
+   SYNTAX:
+
+   1. ANSI:
+      SELECT Column Name
+      FROM Table_NAMEl INNER JOIN TABLE_NAME2 
+      ON <J0IN_CONDITION>
+
+
+EX:     
+             SELECT * FROM EMP INNER JOIN DEPT
+             ON EMP.DEPTNO = DEPT.DEPTID;
+
+    2.ORACLE: SELECT COLUMN_NAME
+              FROM Table_Namel ,Table_Name2 
+              WHERE <J0IN CONDITION>;
+ _________________________________________________________________________________________________-
+   
+                      3.  OUTER JOIN
+      
+In OUTER JOIN WE get the unmatched Records along with the matched records.
+
+→ Left outer Join.
+
+       In Left outer join we get unmatched records of Left table along with matched records.
+
+Syntax:-
+
+ANSI:-
+     Select Column_Name
+     from table_name1 Left [outer] Join table_name2
+     ON<Join Condition >;
+
+EG - Select *
+     from Emp E Left outer Join Dept D 
+     ON E.DeptNo. = D.Dept No;
+
+ORACLE:- Select Column Name
+         FROM table_Name1,Table_Name2 
+         Where Table_Name1.Col_Name = Table_Name2.Col_Name(+)
+
+EX- Select *
+    From Emp E, Dept D 
+    Where E.DeptNo = D.Deptno(+);
+_______________________________________________________
+-> right outer join
+
+(2) Right outer Join
+   -In Right outer Join we get unmatched records. 
+   of Right table along with matched Records,
+
+Syntax:-
+ ANSI-
+ Select Column_Name From Table_Name1 Right [outer] Join table_name2
+ ON <Join_Condition>;
+
+  EX-   SELECT * from emp E Right outer Join Dept D
+        ONE.Dept no = D.Dept No.;
+
+Oracle-
+            Select Column_name
+            From Table_name1, Table_Name2 
+            where Table_name1.colum_name(+) =Table_Name2 Column_name;
+
+     EX :-  SELECT * 
+            FROM EMP E ,DEPT D
+            WHERE E.DEPT(+) = D.DEPTNO.;              
+         
+ _________________________________________________________________________________
+ 
+                  FULL OUTER JOIN
+        
+  To obtain unmatched records of Both The tables along with matched Records.
+
+Syntax-
+  ANSII:-
+       Select Column Name
+       From Table_Name1 full[outer] Join Table_Name2
+       ON <Join_Condition >;
+
+EX :- 
+    Select *
+    From Emp E Full outer Join Dept D
+    ON E.DeptNo = D.DeptNo; 
+    
+ ___________________________________________________________________________________
+                          SELF JOIN
+                          
+  Self Join is used To Join the same two tables OR the Table Itself.
+  
+  **Alias name is mandatory in self Join.
+  
+  QUESTION -Why we use self Join ? 
+  ANSWER -: If the Data to be selected And condition to be Executed AND data's Are present in same table But in different Records we use self Join.
+  
+  SYNTAX :-
+"ANST"- 
+         Select COLUMN_NAME
+         From TABLE_NAME T1 JOIN TABLE_NAME T2.
+         ON <Join_Condition>;
+         
+EX :- SELECT * 
+      FROM EMP E1 JOIN EMP E2
+      ON E1.MGR = E2.EMPNO;
+      
+"ORACLE"- 
+         Select COLUMN_NAME
+         From TABLE_NAME T1 ,TABLE_NAME T2
+         WHERE <Join_Condition>;
+         
+EX :- SELECT * 
+      FROM EMP E1,EMP E2
+      WHERE E1.MGR = E2.EMPNO;
+
+______________________________________________________________________________
+                               NATURAL JOIN
+                               
+In natural join we want be writing Any Join Condition.
+
+> if the table contain SimilaR Columns we get the output of INNER JOIN.
+>If the table is not having SIMILAR Columns we will get the output of Cartesian Join.
+
+ QUESTION :-Why OR when we use natural Join ?
+ ANSWER - Whenever there is no table structure we use natural Join.
+          When columns that are present table structure.
+          
+
+ SYNTAX : 
+ "ANSII":-
+         SELECT COLUMN_NAME
+         FROM Table_Name1 Natural JOIN Table_Name2.
+ EX:
+        SELECT *
+        FORM EMP NATURAL JOIN SALGRADE; 
+
+_________________________________________________________________________
+                  IN BUILT SINGLE ROW FUNCTION
+ 
+ DUAL - DUAL IS A DUMMY TABLE TO PRINT THE RESULT OF any MATHEMATICAL OPERATION DONE.
+ 
+--> UPPER()-
+         THIS function is used to convert the Given String into upper Case.
+    SYNTAX - 
+            UPPER('String')
+   EX- 
+        SELECT UPPER('dinga')
+        FROM DUAL;     
+        O/P -> DINGA
+  
+-->  LOWER()-
+         This function is used to convert Given string into Lower Case.
+          Syntax -
+                 LOWER('string')
+          EX- 
+                 SELECT LOWER('Dinga')
+                 FROM DUAL;     
+  
+-->  INITCAP()-
+         This function is used to convert the initial character OR the given string into UPPER CASE.
+          Syntax:- INITCAP('STRING')
+ 
+ EX;    SELECT INITCAP('deepshikha khatarkar')
+        FROM DUAL;
+        
+        o/p -> Deepshikha Khatarkar
+   
+-->   LENGTH     
+       -  This FUNCTION IS USED  to count the number of character that are present in the string.
+  SYNTAX ->        Length ('string')
+  EX :- 
+     Select length('MODI')
+     from Dual;
+  O/P -> LENGTH('MODI')
+         -- 4
+         
+         
+NOTE -> WE CAN PASS SINGLE ROW FUNCTION IN WHERE CLAUSE EXECUTES ROW_BY_ROW AND SINGLE ROW FUNCTION ALSO EXECUTES ROW_BY_ROW.
+
+         
+         
+ ---> REVERSE()-
+        This function is used to Reverse the giving string.
+
+Syntax:- REVERSE('string')
+
+EX-    Select Reverse('DINGA');
+      O/P-> AGNID
+      
+--->   SUBSTR()
+          THIS FUNCTION IS USED TO EXTRACT THE PART OF THE STRING FROM THE GIVEN ORIGINAL STRING.
+          SYNTAX: 
+              SUBSTR('ORIGINAL_STRING', POSITION,[LENGTH])
+
+---> MOD()
+        THIS FUNCTION IS USED TO OBTAIN MODULUS OF THE GIVEN NUMBERS
+        (REMINDER).
+   SYNTAX-:   
+            MOD(m,n)
+            
+ 
+ --->TO CHAR
+       -THIS FUNCTION IS USED TO CONVERT THE GIVEN DATE TO STRING FORMAT.
+       
+SYNTAX-:
+       TO_CHAR(DATE, 'FORMAT_MODELS')
+
+     FORMAT_MODELS
+
+1. YEAR   -
+2. YYYY  - 2023
+3. YY - 23
+4. MONTH - AUGUST
+5. MON - AUG
+6. MM - 08
+7. DAY - WEDNESDAY
+8. DY - WED
+9. DD - 16
+10. D - 3
+   TIMINGS
+11. HH24 -13
+12. HH12 - 01 
+13. MI - 40
+14. SS - 36  (SECONDS)
+
+EX - SELECT TO_CHAR(SYSDATE,'YEAR')
+      FROM DUAL;
+0/P -> TWENTY-TWENTY-THREE
+
+
+--->SYSDATE
+     THIS COMMAND IS USED TO OBTAIN THE CURRENT DATE FROM DATABASE
+
+--->SYSTIMESTAMP
+     THIS COMMAND IS USED TO OBTAIN THE DATE AND TIME ALONG WITH TIMEZONE.
+     
+--->TO_DATE()
+     THIS FUNCTION IS USED TO CONVERT THE DATE STRING TO DATE FORMAT.
+     
+     SYNTAX -> 
+          TO_DATE('DATE_STR')
+
+---> NVL(): [NULL VALUE LOGIC]
+ 
+ SYNTAX: NVL(ARG1, ARG2)
+
+     > IT CAN ACCEPT 2 ARGUMENTS
+     > IN ARG1 WE MUST WRITE A COLUMN NAME or EXPRESSION THAT CAN BE NULL.
+     > IN ARG2 WE MUST WRITE A VALUE THAT CAN BE SUBSTITUTED IN PLACE OF NULL
+   **> IF ARG1 IS NOT NULL ,NVL RETURNS SAME VALUE PRESANT IN ARG1.
+   
+      EX :- 
+           SELECT TO_DTAE('15-AUG-1947')
+           FROM DUAL;
+           
+           SELECT TO_DTAE(('15-AUG-1947'),DAY)
+           FROM DUAL;
+           
+ _____________________________________________________________________________
+                  DATATYPES
+   
+   DATATYPES ARE USED TO DETERMINE WHAT TYPE OR KIND OF DATA WILL BE STORED IN A PARTICULAR MEMORY LOCATION.
+                  
+        DATATYPES IN SQL
+
+             1. CHAR
+             2. VARCHAR/VARCHAR2
+             3. NUMBER
+             4. DATE
+             5. LARGE OBJECT
+                     a. CHARACTER LARGE OBJECT(CLOB)
+                     b. BINARY LARGE OBJECT(BLOB)
+                     
+  --->1. CHAR 
+          - CHAR DATATYPE CAN ACCEPT CHARACTERS SUCH AS
+             A-Z
+             a-z
+             0-9' OR  SPECIAL CHARACTERS (#,",$,-).
+             
+ASCII (AMERICAN STANDARD CODE FOR INFORMATION INTERCHANGE)
+     
+     A-65
+     Z-90
+     a-97
+     z-122
+
+     SYNTAX -
+      CHAR(SIZE)
+
+SIZE-IT IS USED TO DETERMINE THE NO. OF CHARACTERS THAT WE CAN STORE.
+
+> WHENEVER WE MENTION CHAR DATATYPE WE HAVE TO MENTION SIZE FOR IT.
+> THE MAX SIZE THAT WE CAN STORE IS 2000.
+***> IT IS A TYPE OF "FIXED MEMORY ALLOCATION".
+             
+DRAWBACK --> MAJOR DRAWBACK IS "WESTAGE OF MEMORY".
+
+--> 2.VARCHAR
+            VARCHAR DATATYPE CAN ACCEPT CHARACTERS SUCH AS
+
+            A-Z,
+            a-z,
+            0-9 OR SPECIAL CHARACTERS (#,"$,-)
+ 
+      SYNTAX :- VARCHAR(SIZE)
+
+     SIZE-IT IS USED TO DETERMINE THE NO. OF CHARACTERS THAT WE CAN STORE.
+     > WHENEVER WE MENTION VARCHAR DATATYPE WE HAVE TO MENTION SIZE FOR IT.
+     > THE MAX. SIZE THAT WE CAN STORE IS 2000.
+     ***> IT IS TYPE OF "VARIABLE LENGTH MEMORY ALLOCATION" THERE IS NO WASTAGE OF MEMORY IN VARCHAR   
+
+3. VARCHAR2
+          VARCHAR2 IS THE UPDATED VERSION OF VARCHAR
+          THE SIZE IS UPDATED FROM 2000 TO 4000
+
+    SYNTAX-
+    VARCHAR2(SIZE)
+
+       > THE MAX SIZE WE CAN STORE IS 4000.
+       
+4.  NUMBER
+        IT IS USED TO DETERMINE THE DIGITS WE ARE GOING TO STORE N NUMERICAL PLACE.
+         SYNTAX :-
+                NUMBER(PRECISION,SCALE)   
+         PRECISION  -> IT IS USED TO DETERMINE THE DIGITS WE ARE GOING TO STORE IN NUMERIC PLACE.
+         SCALE -> IT IS USED TO DETERMINE THE NO. OF DIGITS WE ARE GOING TO STORE IN DECIMAL PLACE WITHIN THE PRECISION.
+      > THE MAX PRECISION WE CAN STORE IS 38. THE MAX SCALE WE CAN STORE IS 127   
+          
+          
+5.  DATE 
+       DATE SHOULD ALWAYS BE ENCLOSED WITHIN SINGLE QUOTES
+ 
+5. LARGE OBJECT
+    a. CLOB (CHARACTER LARGE OBJECT)
+        THIS IS USED TO STORE THE CHARACTERS UPTO 4GB OF SIZE
+          SYNTAX-CLOB
+ 
+    b. BLOB (BINARY LARGE OBJECT)
+        THIS IS USED TO STORE BINARY NUMBERS OF IMAGES, VIDEOS,FILE ETC.. UPTO 4GB OF SIZE.
+           SYNTAX-BLOB         
+      
+________________________________________________________________________
+
+                                CONSTRAINTS:-
+   CONSTRAINTS ARE THE CONDITIONS THAT ARE ASSIGNED TO A PARTICULAR COLUMN TO VALIDATE THE DATA.
+   
+   TYPES OF CONSTRAINTS:-
+           1. UNIQUE
+           2. NOT NULL
+           3. CHECK
+           4. PRIMARY KEY
+           5. FOREIGN KEY
+           
+1.UNIQUE -
+      UNIQUE IS A CONSTRAINT WHICH IS ASSIGNED TO A PARTICULAR COLUMN WHICH CANNOT ACCEPT REPEATED or DUPLICATE VALUES.
+
+2. NOT NULL -
+      NOT NULL IS A CONSTRAINT WHICH IS ASSIGNED TO A PARTICULAR COLUMN WHICH CANNOT BE NULL or WHICH ARE MANDATORY.
+
+3. CHECK -
+      CHECK IS A CONSTRAINT WHICH IS ASSIGNED TO A PARTICULAR COLUMN FOR EXTRA VALIDATIONS. 
+      CHECK CONSTRAINT IS ASSIGNED WITH A CONDITION, IF THE CONDITION IS TRUE THE VALUE GETS ACCEPTED, ELSE REJECTED.
+      EG:
+          1. CHECK(LENGTH(PHNO)=10)
+          2. CHECK(SAL>0)  
+          
+4. PRIMARY KEY
+      PRIMARY KEY IS A CONSTRAINT WHICH IS USED TO ASSIGN TO A COLUMN TO IDENTIFY A RECORD UNIQUELY FROM THE TABLE.
+
+    >CHARACTERISTICS OF PRIMATY KEY
+          -> WE CAN HAVE ONLY ONE PRIMARY KEY IN A TABLE.
+          -> IT CANNOT ACCEPT REPEATED OR DUPLICATE VALUES.
+          -> IT CANNOT ACCEPT NULL.
+          -> IT IS A COMBINATION OF UNIQUE AND NOT NULL
+          -> PRIMARY KEY IS NOT MANDATORY BUT RECOMENDED TO HAVE ONE IN TABLE.
+
+5. FOREIGN KEY
+          IT IS CONSTRAINT WHICH IS USED TO ESTABLISH THE CONNECTION B/W TWO TABLES.
+
+  >CHARACTERISTICS OF FOREIGN KEY
+
+1. WE CAN HAVE 'n' NO. OF FOREIGN KEYS IN A TABLE.
+2. IT CAN ACCEPT REPEATED OR DUPLICATE VALUES.
+3. IT CAN ACCEPT NULL
+4. IT IS NOT A COMBINATION OF UNIQUE AND NOT NULL
+5. IT IS PRESENT IN CHILD TABLE BUT ACTUALLY BELONGS TO PARENT TABLE. 
+6. IT IS ALSO REFERRED AS "REFERENTIAL INTIGRITY CONSTRAINT".
+
+ONLY PRIMARY KEY CAN TRAVEL TO ANOTHER TABLE WHEN IT TRAVELS IT BECOMES FOREIGN KEY.
+
+
+___________________________________________________________________________________
+                    DDL (DATA DEFINITION LANGUAGE)
+                    
+THIS STATEMENT IS USED TO CREATE,RENAME,ALTER OR DELETE AN OBJECT FROM DATABASE.
+
+    THERE ARE 5 STATEMENTS:
+                1.CREATE
+                2.RENAME
+                3.ALTER
+                4.TRUNCATE
+                5.DROP                
+           
+   NOTE -> COMPLETE DDL STMTS DEALS WITH TABLES.
+ 
+ -> CREATE - 
+            THIS STMT IS USED TO CREATE AN OBJECT IN DATABASE.
+         EX :- TABLE
+               VIEW
+     SYNTAX :- 
+                     
+   CREATE TABLE TABLE_NAME
+   (COLUMN_NAME1 DATATYPE NOT NULL/(NULL),
+    COLUMN_NAME2 DATATYPE NOT NULL/(NULL),
+    COLUMN_NAME3 DATATYPE NOT NULL/(NULL),
+ 
+    COLUMN_NAME N DATATYPE NOT NULL/[NULL},
+    CONSTRAINT CONSTRAINT_REF_NAME UNIQUE(COLUMN_NAME),
+    CONSTRAINT CONSTRAINT_REF_NAME CHECK(CONDITION),
+    CONSTRAINT constraint_ref_name PRIMARY KEY(COLUMN_NAME)
+    CONSTRAINT constraint_ref_name FOREIGN KEY(COLUMN_NAME)
+    REFERENCES parent_table_name(COLUMN_NAME));
+    
+ ________________________
+ RENAME -
+          THIS STMT IS USED TO RENAME THE CURRENT TABLE NAME TO NEW NAME IN DATABASE.
+       
+    SYNTAX - RENAME CURRENT_TABLE_NAME TO NEW_TABLE_NAME;
+    EX -> RENAME PRODUCT TO PROD;
+    
+    ____________________
+***ALTER -
+         THIS STMT IS USED TO MODIFY THE OBJECTS IN DATABASE.
+         
+   SYNTAX:
+        1.TO ADD A COL:
+             ALTER TABLE table_name
+             ADD COLUMN_NAME DATATYPE NULL/NOT NULL;
+
+        2.TO DROP A COL:
+             ALTER TABLE table name
+             DROP COLUMN COLUMN_NAME;
+
+        3.TO CHANGE THE DATATYPE:
+             ALTER TABLE table name
+             MODIFY COLUMN_NAME new_datatype;
+
+        4.TO CHANGE THE NOT NULL CONSTRAINT:
+             ALTER TABLE table_name
+             MODIFY COLUMN_NAME existing DATATYPE NULL/NOT NULL;
+
+        5.TO RENAME THE COLUMN:
+             ALTER TABLE table name
+             RENAME COLUMN current name TO new_name;
+
+        6.TO MODIFY CONSTRAINTS:
+               a) ALTER TABLE table name
+                  ADD CONSTRAINT constraint ref_name UNIQUE(column_name);
+
+               b) ALTER TABLE table name
+                  ADD CONSTRAINT Constraint ref_name CHECK(condition);
+
+               c) ALTER TABLE table name
+                  ADD CONSTRAINT constraint ref_name PRIMARY KEY(column name);
+
+               d)ALTER TABLE table name
+                 ADD CONSTRAINT constraint_ref_name FOREIGN KEY(column_name)
+                 REFERENCES parent_table_name (column_name);         
+    
+______________________________  
+ 4. TRUNCATE
+        IT IS USED TO DELETE ALL THE RECORDS FROM THE TABLE PERMANENTLY.
+
+        SYNTAX:- TRUNCATE TABLE table_name;
+        
+ _____________________
+ 5. DROP
+        THIS STATEMENT IS USED TO DELETE THE OBJECT Le, TABLES FROM THE DATABASE ALONG WITH TABLE STRUCTURE.
+
+        SYNTAX: DROP TABLE table_name;
+        
+        > TO RECOVER THE TABLE:(only in oracle)
+         SYNTAX:
+              FLASHBACK TABLE table_name
+              TO BEFORE DROP 
+             [RENAME TO new_name];
+
+       > TO DROP THE TABLE FROM RECYCLE BIN SYNTAX:
+              PURGE TABLE table_name;
+              
+_______________________________________________________________________________________
+
+                        DATA MANIPULATION LANGUAGE(DML)
+        
+        THIS STATEMENT IS USED TO INSERT, UPDATE OR DELETE THE RECORDS FROM THE TABLE.
+        
+        THERE ARE THREE STATEMENTS:
+           1. INSERT
+           2. UPDATE
+           3. DELETE
+
+--> INSERT
+        THIS STATEMENT IS USED TO INSERT THE RECORDS INTO THE TABLE.
+        
+        SYNTAX :- 
+
+       case 1 --> WHENEVER WE KNOW THE SEQUENCE OR ORDER OF THE COLUMN NAMES-
+         syntax   1: INSERT INTO table name VALUES (VI,V2,-------VN); 
+         
+       CASE 2 -->  WHENEVER WE KNOW THE only COLUMN NAMES BUT WE DON'T KNOW THE SEQUENCE OF THE COLUMN NAMES-
+         syntax   2: INSERT INTO table name(COL1,COL2, COLn) VALUES(V1,V2,----------VN);
+         
+       CASE 3 --> IF WE WANT TO INSERT MULTIPLE RECORD INTO THE TABLE - 
+         syntax   3. INSERT INTO  TABLE_name(COL1,COL2 COLn) VALUES(&COL1,&COL2,......COLn);                
+       
+       EXAMPLE -
+                INSERT INTO  PROD(PID,PNAME,DISCOUNT,PRICE) VALUES(4,BAG,40,400);
+                
+                INSERT INTO  PROD(PID,PNAME,DISCOUNT,PRICE) VALUES(&PID,&PNAME,&DISCOUNT,&PRICE);
+              O/P-> ENTER VALUE OF PID : 6
+                                   PRICE : 600
+                                   PNAME : 'JEANS'
+                                   DISCOUNT : 20
+ _________________________________________________________________________________
+ --> UPDATE
+            THIS STATEMENT IS USED TO UPDATE THE RECORDS INTO THE TABLE.
+          
+          SYNTAX -
+               UPDATE TABLE_NAME 
+               SET COL1 = V₁, Col 2 = V₂, coln = Vn
+               [Where <filter_condition >];
+          
+          EXAMPLE-
+               UPDTAE PROD
+               SET PName="Horlicks", Price = 260
+               where PID = 2;
+_____________________________________________________
+--> DELETE 
+            THIS STATEMENT IS USED TO DELETE THE PARTICULAR RECORDS FROM THE TABLE.
+          
+          SYNTAX -
+               DELETE FROM TABLE_NAME 
+               [Where <filter_condition >];
+          
+          EXAMPLE-
+               DELETE FROM PROD
+               where PID IN(3,4,5);
+               
+          EXAMPLE 
+               DELETE FROM PROD
+               where PID =6;
+ ______________________________________________________________________________
+                                Transaction Control Language (TCL).
+               
+                There are thRee STMT 
+                -> Commit
+                -> Save point
+                -> Roll Back
+
+COMMIT ->This stmt is used to save the Transaction on Database.
+
+
+     SYNTAX :-
+               COMMIT;
+       
+ SAVEPOINT -> This stmt is used to MARK POSITION on Database.
+       SYNTAX :-
+              SVAPOINT<SAVEPOINT_NMAE>;
+                
+ROLLBACK :- This stmt is used to Go Back or UNDO To the previous SAVEPOINT.
+       SYNTAX :
+              ROLLBACK TO SAVEPOINT_NAME; 
+  
+  
+-> INSERT into PROD values(1, 'CHAIR'. 500.10);
+Save point R1; 
+
+-> INSERT into PROD Values(2,'Pen',100,16); 
+
+// BELOW Records deleted Permanently
+
+-> savepoint R2; 
+-> Insert Into Prod values(3, 'BOARD',5000,50);
+-- ROLLBACK TO R1;
+________________________________________________________________________________________________
+
+                DCL (DATA CONTROL LANGUAGE)
+
+This stmt is used to give the permission or take back permission from the another user.
+
+There are two statements :-
+           (1) Grant:- This stmt as used to give permission to another user
+       
+       Syntax -
+              GRANT sql_stmt ON Table_Name
+              To user_name;
+
+           (2) Revoke: This stmt is used to take back the permission from Another user.
+       SYNTAX:-
+              REVOKE SQL_STMT ON TABLE_NAME
+              FROM USER_NAME;
+
+              Scott Database                 HR. Employers
+              
+                -> Dept                      -> COUNTREIS
+                -> Emp                       -> REGIONS
+                -> Salgrade                  -> EMPLOYEES
+                -> Bonus
+                -> Prod
+            
+            1.-> GRANT SELECT ON EMPLOYEES TO SCOTT;
+            2.-> SELECT * FROM HR EMPLOYEES;
+            3.-> REVOKE SELECT ON EMPLOYEES FROM SCOTT; 
+ ___________________________________________________________________________________________________________
+                    PSUEDO COLUMN
+                    
+Pseudo Columns are the false Columns that are present in each and every Table must be called Explicitly. 
+
+--> Pseudo of Column Cannot be seen without calling them
+
+      Types of Pseudo Column
+             -> ROW ID
+             -> ROW NUM
+
+Row ID:- Row TD is an 18 digit address in which the records present or the record is stored in the memory. 
+         syntax -
+              Select RowID, Emp.*
+              from Emp;
+              
+           -> Row ID is one of the way to access or delete the records.
+           -> Row ID is Unique.
+           -> RowID is present be each and every records.
+           -> RowID IS generated at the time of insertion of records.
+           -> RowID Cannot be INSERTED, UPDTAE as DELETE.
+           -> Empty table will not be having ROWID.
+           -> ROWID is static in Nature ( CONSTANT).
+           -> RowID Can be used to identify a record uniquely from the Table.
+            When there is no key attributes or primary key.
+_____________________________________________________________________
+                    ROW NUM
+
+ROWNUM act as Seriel number to The Result TABLE
+
+EXAMPLE-
+        Select RowNum, Emp.*
+        from Emp;
+
+Note-
+           ->  RowNum is used as a record Number that is assigned to the result Table.
+           ->  RowNum Dynamic in Nature ( keeps on changing)
+           ->  RowNum is generated at the time of execution.
+           ->  RowNum always start with 0 AND 1.
+           ->  RowNum Cannot Be Duplicated. 
+           ->  RowNum get increment after it is assigned.
+
+
+QUESTION :- WAQTD the first three records. records from Emp Table
+QUERY -> 
+         SELECT ROWNUM,EMP.*
+         FROM EMP WHERE ROWNUM IN(1,2,3);
+ 
+ ________________TO MAKE ROWNUM AS STATIC______________
+
+     -> Take a Table and assign rownum to a given Table.
+     -> Change the ROWNUM To any other name by using ALIAS (SLNO).
+     -> Use This as a SUBQUERY in from OUTER query.
+     -> In the outer query we the ALIAS NAME in the Condition.
+        EX- 
+            SELECT ROWNUM SLNO,EMP.*
+            FROM EMP;
+            
+       question - 5th record from emp table ?
+       QUERY->   SELECT * FROM(SELECT ROWNUM SLNO,EMP.*
+                             FROM EMP)
+                 WHERE SLNO = 5;
+___________________________________________________
+                         ORDER BY
+                        
+ It is used to short the record in ascending or descending order.
+
+    -> Order by Clause must be written as last clause in the stmt.
+    -> order by clause execute after the select clause.
+    -> By default Order By clause short the record in ascending order.
+    -> We can pass Column Name or expression as an Argument in order by clause. 
+
+SYNTAX-
+          SELECT GROUP_BY_EXPRESSION/FUNCTION
+          FROM TABLE_NAME
+          WHERE< FILTER_CONDITION>
+          GROUP BY COLUMN_NAME(EXPRESSION)
+          HAVING <GROUP_FILTER_CONDITION>
+          ORDER BY COLUMN_NAME [ASC/DESC];
+
+
+ORDER from Executions
+
+1. FROM
+2. WHERE(if used)       Row By Row
+3. GROUP (if used)      Row BY ROW
+4. HAVING(if used)      Group By Group.
+5. SELECT               Group By Group.
+6. ORDER BY
+
+ ** To find Nth max and with MIN Salary using RowNum Concept
+
+Syntax :- For Nth MAX
+              SELECT SAL 
+              FORM(SELECT ROWNUM CLNO, SAL 
+              FROM(SELECT DISTINCT SAL
+              FROM EMP ORDER BY SAL DESC)
+              WHERE CLNO = N);
+Syntax :- For Nth MIN
+              SELECT SAL 
+              FORM(SELECT ROWNUM CLNO, SAL 
+              FROM(SELECT DISTINCT SAL
+              FROM EMP ORDER BY SAL ASC)
+              WHERE CLNO = N);
+              
+____________________________________________________________________________________
+                  ATTRIBUTES 
+                 
+(1) Key Attributes :- An attribute which is used to Identify a record uniquely from the  Table called Key Attributes.
+
+(2) Non Key Attributes :- All the Attributes EXCEPT KEY Attributes are reffered as NON KEY Attributes.
+
+(3) Prime key Attribute:- It manage the key attribute on attribute is choosen to be the main attribute to identify the record uniquely from the table.
+
+(4) Non Prime Key Attribute :- 
+
+(5) COMPOSITE Key Attribute :- IT IS A combination of two or more non key attribute which is used to identify the record uniquely from the table.
+
+(6) SUPER Key Attribute :- It is a set of all the key Attributes.
+
+(4) FOREIGN Key Attribute :- It behave as an attribute of another entity to represent the relation.
+         CKA -> NAME ,AGE
+         NKA -> NAME,AGE,HT,WT,DOB
+         
+ ______________________________________________________________________    
+               FUNCTIONAL DEPENDENCY
+     
+Let us Consider relation 'R' with two Attributes 'X' and 'y' respectively in which attribute "X" determines attributes y..
+     OR
+In other words 'y' is dependent on 'X'..
+
